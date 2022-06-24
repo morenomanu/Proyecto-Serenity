@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+ul{
+    list-style: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 30vw;
+    margin: 30px;
+}
+.navegador{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(173, 180, 218, 0.212);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navegador ul{
+    display: flex;
+}
+.navegador ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    padding: 6px;
+}
+.mainInicio{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.cajaFoto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.cajaFoto h2{
+    padding: 10px;
+}
+.cajaFoto img{
+    width: 65vw;
+    padding: 5px;
+}
+.nosotros{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.tarjetaNosotros h2{
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 23px;
+    padding: 10px;
+    margin: 10px;
+}
+.tarjetaNosotros{
+    color:black;
+    width: 90%;
+    font-size: 15px;
+    text-align:center;
+    line-height: 21px;
+    padding: 20px;
+    border: grey solid 1px;
+}
+.fotosInicio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.fotosInicio img{
+    width: 65vw;
+    padding: 5px;
+}
+.footerAncho{
+    display: flex;
+    flex-direction:column;
+    background-color: rgba(173, 180, 218, 0.212);
+    color: black;
+    justify-content: start;
+    padding: 15px;
+    height: 50%;
+    font-size: 15px;
+}
+.footerAncho ul li a{
+    text-decoration: none;
+    color: black;
+}
+.seccionFooter{
+    margin: 5px;
+}
+.seccionFooter h5{
+    padding: 5px 0px;
+}
+.seccionFooter p{
+    width: 150px;
+}
+.seccionFooter img{
+    width: 3vw;
+    margin: 3px;
+}
+.footerCopyright{
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+    font-size: 13px;
+}
+@media(min-width:576px){
+    .navegador ul li a{
+        font-size: 15px;
+        padding: 8px;
+    }
+    .tarjetaNosotros h2{
+        font-size: 27px;
+    }
+    .tarjetaNosotros{
+        font-size: 20px;
+    }
+    .cajaFoto{
+        font-size: 18px;
+    }
+    .footerAncho{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        height: 250px;
+    }  
+}
+@media(min-width:768px){
+    .mainInicio{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .cajaFoto{
+        font-size: 15px;
+    }
+    .cajaFoto img{
+        width: 30vw;
+    }    
+    .tarjetaNosotros h2{
+        font-size: 25px;
+    }
+    .tarjetaNosotros{
+        font-size: 18px;
+    }
+    .fotosInicio img{
+        width: 40vw;
+        padding: 5px;
+    }
+    .footerAncho{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        height: 250px;
+    }
+    .footerAncho p{
+        width: 170px;
+    }  
+}
+@media(min-width:992px){
+    .cajaFoto{
+        margin: 20px;
+    }
+    .nosotros{
+        margin: 50px;
+    }
+    .seccionFooter img{
+        width: 30px;
+    }
+}
+@media(min-width:1200px){
+    .logo img{
+        height: 200px;
+        margin: 50px;
+    }
+    .navegador ul{
+        gap: 1rem;
+    }
+    .navegador ul li a{
+        font-size: 15px;
+    }
+    .cajaFoto{
+        font-size: 20px;
+        margin: 15px;
+    }
+    .cajaFoto h2{
+        font-size: 25px;
+    }
+    .tarjetaNosotros{
+        width: 70%;
+        font-size: 20px;
+    }
+    .fotosInicio{
+        margin: 30px;
+    }
+    .fotosInicio img{
+        width: 400px;
+    }
+    .footerAncho{
+        font-size: 18px;
+    }
+}
+.seccion{
+    margin: 30px;
+    font-size: 13px;
+}
+.seccion a{
+    text-decoration: none;
+}
+.cajasContacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.icon{
+    width: 30px;
+    margin: 5px;
+}
+.canalesOficiales{
+    width: 50%;
+    margin: 10px;
+}
+.canalesOficiales ul li{
+    margin: 10px;
+}
+.formularioContacto{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+form{
+    width: 400px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 30px;
+}
+input{
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+}
+textarea{
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+}
+@media(min-width:768px){
+    .cajasContacto{
+        flex-direction: row;
+    }
+    .canalesOficiales{
+        width: 25%;
+    } 
+    .seccion{
+        margin: 30px 0px 0px 150px;
+        font-size: 15px;
+    }
+}
+.tituloDondeComprar{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 10px;
+}
+.lugaresDondeComprar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 13px;
+}
+.tienda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tienda img{
+    width: 80vw;
+    padding: 10px;
+}
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.ubicacion iframe{
+    width: 80vw;
+    height: 65vw;
+    padding: 10px;
+}
+.sectionDondeComprar{
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 15px;
+}
+@media(min-width:768px){
+    .tituloDondeComprar{
+        margin-top: 30px;
+    }
+    .lugaresDondeComprar{
+        flex-direction: row;
+    }
+    .tienda img{
+        width: 390px;
+    }
+    .ubicacion{
+        margin: 0px;
+    }
+    .ubicacion iframe{
+        width: 390px;
+        height: 290px;
+    }
+}
+@media(min-width:992px){
+    .tituloDondeComprar{
+        font-size: 18px;
+        margin: 0px;
+    }
+    .lugaresDondeComprar{
+        font-size: 15px;
+    }
+    .tienda img{
+        width: 500px;
+    }
+    .ubicacion iframe{
+        width: 500px;
+        height: 370px;
+    }
+    .sectionDondeComprar{
+        font-size: 20px;
+    }
+}
+.tarjetasProductos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.tarjetaProductoIndividual{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border: solid 1px rgba(174, 211, 236, 0.377);
+    background-color: #bcd4df17;
+    margin-top: 80px;
+    text-align: center;
+}
+.tarjetaProductoIndividual h5{
+    font-size: 18px;
+}
+.tarjetaProductoIndividual p{
+    font-size: 15px;
+}
+.tarjetaProductoIndividual img{
+    width: 90%;
+    margin: 10px;
+}
+.tarjetaProductoIndividual button{
+    width: 120px;
+    margin: 15px;
+    padding: 5px 10px;
+    font-size: 13px;
+    color: black;
+    border-color: grey;
+    background-color:white;
+    border-radius: 5px;
+}
+.contenedorNovedades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tarjetaNovedades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 400px;
+    border:rgba(173, 180, 218, 0.212) solid 1px;
+    padding: 20px;
+    margin: 10px;
+}
+.tarjetaNovedades img{
+    width: 90%;
+}
+.tarjetaNovedades h2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+@media(min-width:576px){
+    .tarjetaNovedades{
+        width: 500px;
+    }
+}
+@media(min-width:768px){
+    .contenedorNovedades{
+        margin: 30px;
+    }
+    .tarjetaNovedades{
+        width: 600px;
+    }
+}
