@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serenity</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="shortcut icon" href="./assets/img/logonegro.png" type="image/x-icon">
 </head>
@@ -26,15 +27,15 @@
     </header>
  
     <main class="mainInicio">
-        <div class="cajaFoto">
+        <div data-aos="fade-up" class="cajaFoto">
             <h2>NOVEDADES</h2>
             <a href="./pages/novedades.html"><img src="./assets/img/aestheticsnovedades.jpg" alt=""></a>
         </div>
-        <div class="cajaFoto">
+        <div data-aos="fade-up" class="cajaFoto">
             <h2>PRODUCTOS</h2>
             <a href="./pages/productos.html"><img src="./assets/img/aestheticproductoscopia.jpg" alt=""></a>
         </div>
-        <div class="cajaFoto">
+        <div data-aos="fade-up" class="cajaFoto">
             <h2>CONTACTO</h2>
             <a href="./pages/contacto.html"><img src="./assets/img/aestheticscontactcopia.jpg" alt=""></a>
         </div>
@@ -91,5 +92,9 @@
             <h5>Copyright Serenity-2022. Todos los derechos reservados.</h5>
        </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
