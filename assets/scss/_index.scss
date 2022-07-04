@@ -1,0 +1,48 @@
+.mainInicio{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    .cajaFoto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        margin: 10px;
+        h2{
+            padding: 10px;
+        }
+    }
+}
+.nosotros{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    .tarjetaNosotros{
+        color:black;
+        width: 90%;
+        font-size: 15px;
+        text-align:center;
+        line-height: 21px;
+        padding: 20px;
+        border: grey solid 1px;
+        h2{
+            font-family:'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: 23px;
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+}
+.fotosInicio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    img{
+        width: 65vw;
+        padding: 5px;
+    }
+}

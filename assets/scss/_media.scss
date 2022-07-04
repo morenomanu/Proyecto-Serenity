@@ -1,0 +1,144 @@
+@media(min-width:576px){
+    .tarjetaNosotros{
+        font-size: 20px;
+        h2{
+            font-size: 27px;
+        }
+    }
+    .cajaFoto{
+        font-size: 18px;
+    }
+    .tarjetaNovedades{
+        width: 500px;
+    }
+    .footerAncho{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        height: 250px;
+    }  
+}
+@media(min-width:768px){
+    .mainInicio{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 30px 70px;
+        .cajaFoto{
+            font-size: 15px;
+            img{
+                width: 350px;
+            }  
+        }
+    }
+    .tarjetaNosotros{
+        font-size: 18px;
+        h2{
+            font-size: 25px;
+        }
+    }
+    .fotosInicio img{
+        width: 40vw;
+        padding: 5px;
+    }
+    .seccion{
+        margin: 30px 0px 0px 150px;
+        font-size: 15px;
+    }
+    .contenedorNovedades{
+        margin: 30px;
+        .tarjetaNovedades{
+            width: 600px;
+        }
+    }
+    .tituloDondeComprar{
+        margin-top: 30px;
+    }
+    .lugaresDondeComprar{
+        flex-direction: row;
+        .tienda img{
+            width: 390px;
+        }
+        .ubicacion{
+            margin: 0px;
+            iframe{
+                width: 390px;
+                height: 290px;
+            }
+        }
+    }
+    .cajasContacto{
+        flex-direction: row;
+        .canalesOficiales{
+            width: 25%;
+        }
+    }
+    .footerAncho{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 100px;
+        height: 250px;
+        p{
+            width: 170px;
+        }
+        h5{
+            font-size: 15px;
+        }
+    }
+    .footerCopyright{
+        font-size: 13px;
+    }  
+}
+@media(min-width:992px){
+    .cajaFoto{
+        margin: 20px;
+    }
+    .nosotros{
+        margin: 50px;
+    }
+    .tituloDondeComprar{
+        font-size: 18px;
+        margin: 0px;
+    }
+    .lugaresDondeComprar{
+        font-size: 15px;
+        .tienda img{
+            width: 500px;
+        }
+        .ubicacion iframe{
+            width: 500px;
+            height: 370px;
+        }
+    }
+    .sectionDondeComprar{
+        font-size: 20px;
+    }
+    .seccionFooter img{
+        width: 30px;
+    }
+}
+@media(min-width:1200px){
+    .logo img{
+        height: 200px;
+        margin: 50px;
+    }
+    .cajaFoto{
+        font-size: 20px;
+        margin: 15px;
+        h2{
+            font-size: 25px;
+        }
+    }
+    .tarjetaNosotros{
+        width: 70%;
+        font-size: 20px;
+    }
+    .fotosInicio{
+        margin: 30px;
+        img{
+            width: 400px;
+        }
+    }
+    .footerAncho{
+        font-size: 16px;
+    }
+}

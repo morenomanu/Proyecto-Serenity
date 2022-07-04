@@ -1,0 +1,40 @@
+.cajasContacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .canalesOficiales{
+        width: 50%;
+        margin: 10px;
+        ul li{
+            margin: 10px;
+        }
+        .icon{
+            width: 30px;
+            margin: 5px;
+        }
+    }
+    .formularioContacto{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        form{
+            width: 400px;
+            border: 1px solid grey;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 30px;
+            input{
+                margin-bottom: 10px;
+                width: 100%;
+                padding: 5px;
+            }
+            textarea{
+                margin-bottom: 10px;
+                width: 100%;
+                padding: 5px;
+            }
+        }
+    }
+}

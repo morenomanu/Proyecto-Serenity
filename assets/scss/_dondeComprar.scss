@@ -1,0 +1,43 @@
+.tituloDondeComprar{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 10px;
+}
+.lugaresDondeComprar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 13px;
+    .tienda{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 80vw;
+            padding: 10px;
+        }
+    }
+    .ubicacion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        iframe{
+            width: 80vw;
+            height: 65vw;
+            padding: 10px;
+        }
+    }
+}
+.sectionDondeComprar{
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 15px;
+}

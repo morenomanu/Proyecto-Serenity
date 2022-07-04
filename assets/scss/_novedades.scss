@@ -1,0 +1,23 @@
+.contenedorNovedades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tarjetaNovedades{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        width: 400px;
+        border: $colorPrimario solid 1px;
+        padding: 20px;
+        margin: 10px;
+        img{
+            width: 90%;
+        }
+        h2{
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+}
