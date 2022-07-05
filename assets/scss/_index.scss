@@ -1,8 +1,9 @@
 .mainInicio{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     padding: 15px;
-    margin: 30px 100px;
+    margin: 30px 150px;
     .cajaFoto{
         display: flex;
         flex-direction: column;
@@ -58,5 +59,35 @@
     img{
         width: 400px;
         margin: 10px;
+    }
+}
+
+.separacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.671);
+    color: white;
+    img{
+        width: 50px;
+        margin: 8px;
+    }
+}
+.instagram{
+    margin: 7px;
+    line-height: 0%;
+    h3{
+        font-size: 30px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+@media(min-width:768px){
+    .mainInicio{
+        flex-direction: row;
     }
 }

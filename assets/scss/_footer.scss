@@ -1,8 +1,10 @@
 .footerAncho{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgba(128, 128, 128, 0.123);
     color: black;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 15px;
     height: 50%;
     font-size: 15px;
@@ -26,8 +28,14 @@
     }
 }
 .footerCopyright{
-    margin: 5px;
+    margin: 5px 0;
     display: flex;
     justify-content: start;
     font-size: 13px;
+}
+@media(min-width:768px){
+    .footerAncho{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
