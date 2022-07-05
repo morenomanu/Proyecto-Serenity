@@ -17,7 +17,7 @@
         justify-content: center;
         align-items: center;
         img{
-            width: 80vw;
+            width: 500px;
             padding: 10px;
         }
     }
@@ -26,15 +26,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 30px;
+        margin: 20px;
         iframe{
-            width: 80vw;
-            height: 65vw;
+            width: 500px;
+            height: 400px;
             padding: 10px;
         }
     }
 }
-.sectionDondeComprar{
+.seccionDondeComprar{
     grid-area: section;
     display: flex;
     justify-content: center;

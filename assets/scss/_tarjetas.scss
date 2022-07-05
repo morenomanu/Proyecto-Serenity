@@ -1,0 +1,42 @@
+.seccion{
+    margin: 30px;
+    font-size: 13px;
+    a{
+        text-decoration: none;
+    }
+}
+.contenedorTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 200px;
+    :hover{
+        transform: scale(1.05);
+        transition: all 0.5s ease;
+    }
+    .tarjeta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25vw;
+        text-align: center;
+        padding: 20px;
+        margin: 50px 10px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
+        img{
+            width: 90%;
+            margin-bottom: 30px;
+        }
+        h5{
+            margin: 10px;
+        }
+        button{
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px;
+            background-color: rgba(128, 128, 128, 0.274);
+        }
+    }
+}

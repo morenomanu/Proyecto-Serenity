@@ -1,7 +1,8 @@
 .mainInicio{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     padding: 15px;
+    margin: 30px 100px;
     .cajaFoto{
         display: flex;
         flex-direction: column;
@@ -9,6 +10,14 @@
         align-items: center;
         font-size: 15px;
         margin: 10px;
+        :hover{
+            transform: scale(1.03);
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
+        }
+        img{
+            width: 350px;
+        }
         h2{
             padding: 10px;
         }
@@ -35,14 +44,19 @@
         }
     }
 }
-.fotosInicio{
+.contenedorFotos{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    margin: 80px 30px;
+    :hover{
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.281);
+        transition: all 0.5s ease;
+        transform: scale(1.01);
+    }
     img{
-        width: 65vw;
-        padding: 5px;
+        width: 400px;
+        margin: 10px;
     }
 }

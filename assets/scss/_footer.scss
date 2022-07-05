@@ -1,9 +1,8 @@
 .footerAncho{
     display: flex;
-    flex-direction:column;
-    background-color: $colorPrimario;
+    background-color: rgba(128, 128, 128, 0.123);
     color: black;
-    justify-content: start;
+    justify-content: space-evenly;
     padding: 15px;
     height: 50%;
     font-size: 15px;
