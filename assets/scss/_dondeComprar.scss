@@ -15,9 +15,6 @@
         transform: scale(1.05);
         transition: all 0.5s ease;
     }
-    h2{
-        font-size: 25px;
-    }
     .tienda{
         display: flex;
         flex-direction: column;
@@ -25,7 +22,7 @@
         align-items: center;
         margin: 20px 0;
         img{
-            width: 500px;
+            width: 50vw;
             padding: 10px;
         }
     }
@@ -36,14 +33,13 @@
         align-items: center;
         margin: 20px 0;
         iframe{
-            width: 500px;
-            height: 400px;
+            width: 50vw;
+            height: 40vw;
             padding: 10px;
         }
     }
 }
 .seccionDondeComprar{
-    width: 100%;
     height: 130px;
     display: flex;
     align-items: center;

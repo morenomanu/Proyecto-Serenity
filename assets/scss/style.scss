@@ -5,3 +5,19 @@
 @import "header";
 @import "footer";
 @import "general";
+@import "variables";
+@import "mixin";
+
+.btn{
+    padding: map-get($btn, padding );
+    border: map-get($btn, border );
+    border-radius: map-get($btn , radius );
+    @include propiedades(150px,auto,rgb(7, 7, 7))
+}
+@each $key , $var in $colores { 
+    .btn-#{$key}{
+        @extend .btn;
+        background-color: $var;
+    }
+}
+

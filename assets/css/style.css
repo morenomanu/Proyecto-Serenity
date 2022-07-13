@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+.titulo {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
 .mainInicio {
   display: flex;
   flex-direction: column;
@@ -26,28 +32,6 @@
   padding: 10px;
 }
 
-.nosotros {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
-}
-.nosotros .tarjetaNosotros {
-  color: black;
-  width: 90%;
-  font-size: 15px;
-  text-align: center;
-  line-height: 21px;
-  padding: 20px;
-  border: grey solid 1px;
-}
-.nosotros .tarjetaNosotros h2 {
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-  font-size: 23px;
-  padding: 10px;
-  margin: 10px;
-}
-
 .contenedorFotos {
   display: flex;
   flex-wrap: wrap;
@@ -70,12 +54,12 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-  width: 100%;
   background-color: rgba(128, 128, 128, 0.671);
   color: white;
+  margin: 100px 0px;
 }
 .separacion img {
-  width: 50px;
+  width: 40px;
   margin: 8px;
 }
 
@@ -91,9 +75,10 @@
   font-size: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .mainInicio {
     flex-direction: row;
+    margin: 20px;
   }
 }
 .seccion {
@@ -133,12 +118,6 @@
 .contenedorTarjetas .tarjeta h5 {
   margin: 10px;
 }
-.contenedorTarjetas .tarjeta button {
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px;
-  background-color: rgba(128, 128, 128, 0.274);
-}
 
 @media (min-width: 768px) {
   .contenedorTarjetas {
@@ -172,9 +151,6 @@
   transform: scale(1.05);
   transition: all 0.5s ease;
 }
-.lugaresDondeComprar h2 {
-  font-size: 25px;
-}
 .lugaresDondeComprar .tienda {
   display: flex;
   flex-direction: column;
@@ -183,7 +159,7 @@
   margin: 20px 0;
 }
 .lugaresDondeComprar .tienda img {
-  width: 500px;
+  width: 50vw;
   padding: 10px;
 }
 .lugaresDondeComprar .ubicacion {
@@ -194,13 +170,12 @@
   margin: 20px 0;
 }
 .lugaresDondeComprar .ubicacion iframe {
-  width: 500px;
-  height: 400px;
+  width: 50vw;
+  height: 40vw;
   padding: 10px;
 }
 
 .seccionDondeComprar {
-  width: 100%;
   height: 130px;
   display: flex;
   align-items: center;
@@ -258,8 +233,15 @@
   justify-content: center;
 }
 .logo img {
-  height: 300px;
-  margin: 30px;
+  height: 150px;
+  margin: 20px;
+}
+
+.carousel-item p {
+  color: black;
+}
+.carousel-item h5 {
+  color: black;
 }
 
 .footerAncho {
@@ -317,4 +299,24 @@ body {
 
 ul {
   list-style: none;
+}
+
+.btn, .btn-terciario, .btn-secundario, .btn-primario {
+  padding: 8px;
+  border: 1px;
+  width: 150px;
+  height: auto;
+  color: rgb(7, 7, 7);
+}
+
+.btn-primario {
+  background-color: rgba(111, 156, 223, 0.486);
+}
+
+.btn-secundario {
+  background-color: rgba(168, 124, 189, 0.473);
+}
+
+.btn-terciario {
+  background-color: rgba(233, 139, 221, 0.541);
 }
