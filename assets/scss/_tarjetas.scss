@@ -1,5 +1,5 @@
 .seccion{
-    margin: 30px 100px;
+    margin: 30px 0px 30px 100px;
     font-size: 14px;
     a{
         text-decoration: none;
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 20px 0px;
     :hover{
         transform: scale(1.05);
         transition: all 0.5s ease;
@@ -23,16 +23,107 @@
         width: 300px;
         text-align: center;
         padding: 20px;
-        margin: 20px;
+        margin: 30px 10px;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
         img{
             width: 90%;
             margin-bottom: 30px;
         }
         h5{
-            margin: 10px;
+            padding: 10px;
+        }
+        .cuotas{
+            font-weight: bold;
         }
     }
+}
+.btn{
+    width: 150px;
+    padding: 8px;
+    border: 1px;
+    border-radius: 5px;
+    background-color: rgba(59, 100, 214, 0.705);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+.outlet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    h2{
+        padding: 30px;
+        font-size: 60px;
+    }
+    p{
+        padding: 50px;
+        font-size: 20px;
+    }
+}
+.contenedorTipo{
+    display: flex;
+    justify-content: center;
+    .tipo{
+        margin: 20px 5px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
+        cursor: pointer;
+    }
+    img{
+        width: 350px;
+    }
+    p{
+        text-align: center;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.regalos{
+    display: flex;
+    justify-content: center;
+    .regaloUno{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 700px;
+        margin: 50px 5px;
+        background-image: linear-gradient(to top,rgba(63, 78, 82, 0.322),rgba(232, 241, 247, 0.911));
+        img{
+            width: 500px;
+            padding: 20px;
+        }
+        .textoRegalo{
+            width: 400px;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+}
+
+.regaloDos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    margin: 50px 5px;
+    background-image: linear-gradient(to top,rgba(63, 78, 82, 0.349),rgba(232, 241, 247, 0.911));
+    img{
+        width: 370px;
+        padding: 20px 0px;
+    }
+    p{
+        padding: 0px 40px;
+    }
+    .textoRegaloDos{
+        padding-bottom: 15px;
+    }
+}
+.carruselProductos{
+    margin: 50px 0px;
 }
 @media(min-width:768px){
     .contenedorTarjetas{
@@ -40,10 +131,5 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         margin: 30px 50px;
-    }
-}
-@media(min-width:1200px){
-    .contenedorTarjetas{
-        margin: 30px 100px;
     }
 }

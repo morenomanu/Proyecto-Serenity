@@ -1,43 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-.titulo {
+.barraBeneficios {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  padding: 30px;
   padding-top: 40px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+.barraBeneficios .beneficios {
+  display: flex;
+  flex-direction: row;
+}
+.barraBeneficios .beneficios img {
+  width: 35px;
+  height: 30px;
+  padding: 1px 3px;
+}
+.barraBeneficios .beneficios p {
+  padding: 5px;
+}
+
+.contenedorInicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 80px 0px;
 }
 
 .mainInicio {
+  width: 350px;
+  height: 300px;
+  margin: 20px 5px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.432);
+}
+.mainInicio :hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.281);
+  transition: all 0.9s ease;
+  transform: scale(1.1);
+}
+.mainInicio img {
+  width: 100%;
+  height: 100%;
+}
+.mainInicio h3 {
+  font-size: 2rem;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  color: black;
+  font-weight: bold;
+}
+
+.tarjetasServicios {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px;
-  margin: 30px 150px;
+  margin: 80px 0px;
 }
-.mainInicio .cajaFoto {
+.tarjetasServicios .servicio {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
-  margin: 10px;
+  height: 300px;
+  text-align: center;
+  border-radius: 6px;
+  width: 600px;
 }
-.mainInicio .cajaFoto :hover {
-  transform: scale(1.03);
-  transition: all 0.5s ease;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
+.tarjetasServicios img {
+  width: 380px;
+  height: 280px;
+  padding: 20px;
 }
-.mainInicio .cajaFoto img {
-  width: 350px;
-}
-.mainInicio .cajaFoto h2 {
+.tarjetasServicios p {
   padding: 10px;
+}
+
+@media (min-width: 992px) {
+  .tarjetasServicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0px;
+  }
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.281);
 }
 
 .contenedorFotos {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  margin: 80px 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 80px 0px;
 }
 .contenedorFotos :hover {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.281);
@@ -45,8 +108,8 @@
   transform: scale(1.01);
 }
 .contenedorFotos img {
-  width: 400px;
-  margin: 10px;
+  width: 300px;
+  padding: 10px;
 }
 
 .separacion {
@@ -54,35 +117,48 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-color: rgba(128, 128, 128, 0.671);
-  color: white;
-  margin: 100px 0px;
+  color: black;
+  margin: 50px 0px;
+  background-image: linear-gradient(to top, rgba(128, 149, 155, 0.247), rgba(128, 128, 128, 0.123));
 }
 .separacion img {
   width: 40px;
-  margin: 8px;
+  margin: 10px;
 }
-
-.instagram {
-  margin: 7px;
-  line-height: 0%;
+.separacion .instagram {
+  line-height: 20px;
+  margin-top: 10px;
 }
-.instagram h3 {
+.separacion .instagram a {
   font-size: 30px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
 }
-.instagram p {
+.separacion .instagram p {
   font-size: 15px;
 }
 
-@media (min-width: 1200px) {
-  .mainInicio {
+.ahoraDoce {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px;
+}
+
+@media (min-width: 992px) {
+  .contenedorInicio {
+    display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px 0px;
+  }
+  .mainInicio {
     margin: 20px;
   }
 }
 .seccion {
-  margin: 30px 100px;
+  margin: 30px 0px 30px 100px;
   font-size: 14px;
 }
 .seccion a {
@@ -94,7 +170,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 20px 0px;
 }
 .contenedorTarjetas :hover {
   transform: scale(1.05);
@@ -108,7 +184,7 @@
   width: 300px;
   text-align: center;
   padding: 20px;
-  margin: 20px;
+  margin: 30px 10px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
 }
 .contenedorTarjetas .tarjeta img {
@@ -116,7 +192,103 @@
   margin-bottom: 30px;
 }
 .contenedorTarjetas .tarjeta h5 {
-  margin: 10px;
+  padding: 10px;
+}
+.contenedorTarjetas .tarjeta .cuotas {
+  font-weight: bold;
+}
+
+.btn {
+  width: 150px;
+  padding: 8px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: rgba(59, 100, 214, 0.705);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+.outlet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.outlet h2 {
+  padding: 30px;
+  font-size: 60px;
+}
+.outlet p {
+  padding: 50px;
+  font-size: 20px;
+}
+
+.contenedorTipo {
+  display: flex;
+  justify-content: center;
+}
+.contenedorTipo .tipo {
+  margin: 20px 5px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+.contenedorTipo img {
+  width: 350px;
+}
+.contenedorTipo p {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.regalos {
+  display: flex;
+  justify-content: center;
+}
+.regalos .regaloUno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  margin: 50px 5px;
+  background-image: linear-gradient(to top, rgba(63, 78, 82, 0.322), rgba(232, 241, 247, 0.911));
+}
+.regalos .regaloUno img {
+  width: 500px;
+  padding: 20px;
+}
+.regalos .regaloUno .textoRegalo {
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+}
+
+.regaloDos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  margin: 50px 5px;
+  background-image: linear-gradient(to top, rgba(63, 78, 82, 0.349), rgba(232, 241, 247, 0.911));
+}
+.regaloDos img {
+  width: 370px;
+  padding: 20px 0px;
+}
+.regaloDos p {
+  padding: 0px 40px;
+}
+.regaloDos .textoRegaloDos {
+  padding-bottom: 15px;
+}
+
+.carruselProductos {
+  margin: 50px 0px;
 }
 
 @media (min-width: 768px) {
@@ -127,63 +299,21 @@
     margin: 30px 50px;
   }
 }
-@media (min-width: 1200px) {
-  .contenedorTarjetas {
-    margin: 30px 100px;
-  }
-}
-.tituloDondeComprar {
+.ubicacion {
   display: flex;
   justify-content: center;
-  font-size: 15px;
-  padding: 8px;
+  align-items: center;
+  padding: 20px;
+}
+.ubicacion h2 {
+  padding: 30px;
+}
+.ubicacion iframe {
+  width: 500px;
 }
 
-.lugaresDondeComprar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  margin: 10px;
-}
-.lugaresDondeComprar :hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-.lugaresDondeComprar .tienda {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-.lugaresDondeComprar .tienda img {
-  width: 50vw;
-  padding: 10px;
-}
-.lugaresDondeComprar .ubicacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-.lugaresDondeComprar .ubicacion iframe {
-  width: 50vw;
-  height: 40vw;
-  padding: 10px;
-}
-
-.seccionDondeComprar {
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  background-color: rgba(128, 128, 128, 0.671);
-  color: white;
-  margin: 30px 0;
+.carruselTienda {
+  width: 500px;
 }
 
 .cajasContacto {
@@ -207,13 +337,11 @@
 .cajasContacto .formularioContacto {
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 .cajasContacto .formularioContacto form {
   width: 400px;
   border: 1px solid grey;
   border-radius: 8px;
-  margin: 10px;
   padding: 30px;
 }
 .cajasContacto .formularioContacto form input {
@@ -222,19 +350,31 @@
   padding: 5px;
 }
 .cajasContacto .formularioContacto form textarea {
-  margin-bottom: 10px;
   width: 100%;
   padding: 5px;
 }
 
-.logo {
+.envio {
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 5px;
+  background-image: linear-gradient(to top, rgba(128, 149, 155, 0.247), rgba(128, 128, 128, 0.123));
 }
+
+.herramientas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
 .logo img {
   height: 150px;
-  margin: 20px;
+}
+
+.cuenta {
+  font-size: 13px;
 }
 
 .carousel-item p {
@@ -244,38 +384,42 @@
   color: black;
 }
 
+.navegador {
+  font-size: 18px;
+}
+
 .footerAncho {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(128, 128, 128, 0.123);
+  background-image: linear-gradient(to top, rgba(128, 149, 155, 0.247), rgba(128, 128, 128, 0.123));
   color: black;
   justify-content: center;
-  padding: 15px;
-  height: 50%;
+  padding: 50px 5px;
+  height: 70%;
   font-size: 15px;
-}
-.footerAncho .seccionFooter {
-  margin: 5px;
 }
 .footerAncho .seccionFooter ul li a {
   text-decoration: none;
   color: black;
+  font-size: 17px;
 }
-.footerAncho .seccionFooter h5 {
-  padding: 5px 0px;
-  font-size: 16px;
+.footerAncho .seccionFooter h4 {
+  padding: 3px 0px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .footerAncho .seccionFooter p {
   width: 150px;
+  font-size: 17px;
 }
 .footerAncho .seccionFooter img {
   width: 30px;
-  margin: 3px;
+  padding: 3px;
 }
 
 .footerCopyright {
-  margin: 5px 0;
+  padding: 7px 5px;
   display: flex;
   justify-content: start;
   font-size: 13px;
@@ -301,22 +445,42 @@ ul {
   list-style: none;
 }
 
-.btn, .btn-terciario, .btn-secundario, .btn-primario {
-  padding: 8px;
-  border: 1px;
-  width: 150px;
-  height: auto;
-  color: rgb(7, 7, 7);
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px 10px;
+  background-image: linear-gradient(to top, rgba(128, 149, 155, 0.247), rgba(128, 128, 128, 0.123));
 }
 
-.btn-primario {
-  background-color: rgba(111, 156, 223, 0.486);
+.suscribite {
+  padding: 20px 0px;
+}
+.suscribite h4 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.suscribite p {
+  font-size: 20px;
+  width: 300px;
 }
 
-.btn-secundario {
-  background-color: rgba(168, 124, 189, 0.473);
+.email input {
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.btn-terciario {
-  background-color: rgba(233, 139, 221, 0.541);
+@media (min-width: 768px) {
+  .newsletter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0px;
+  }
+  .email {
+    width: 450px;
+  }
 }

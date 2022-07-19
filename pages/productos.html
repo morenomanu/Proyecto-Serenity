@@ -9,13 +9,24 @@
     <title>Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="shortcut icon" href="../assets/img/ss.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/ssicon.png" type="image/x-icon">
 </head>
  
-<body class="contenedor">
+<body>
     <header>
-        <div class="logo">
+        <div class="envio">Envío gratis a todo el país en órdenes superiores a $4.500</div>
+        <div class="herramientas">
+          <div class="buscador">
+            <a href="" target="_blank" hidden></a>
+            <input type="text" placeholder="Buscar">
+            <img src="../assets/img/iconbuscar.png" alt="">
+          </div>
+          <div class="logo">
             <a href="../index.html"><img src="../assets/img/logocuadrado.png" alt=""></a>
+          </div>
+          <div class="cuenta">
+            <p>CREAR CUENTA | INICIAR SESIÓN</p>
+          </div>
         </div>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -26,19 +37,19 @@
               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    <a class="nav-link active navegador" aria-current="page" href="../index.html">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./promociones.html">Promociones</a>
+                    <a class="nav-link navegador" href="./promociones.html">Promociones</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
+                    <a class="nav-link navegador" href="#">Productos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./dondecomprar.html">Dónde Comprar</a>
+                    <a class="nav-link navegador" href="./dondecomprar.html">Dónde Comprar</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                    <a class="nav-link navegador" href="./contacto.html">Contacto</a>
                   </li>
                 </ul>
               </div>
@@ -51,88 +62,144 @@
             <h2>Productos</h2>
             <a href="../index.html">Inicio</a> / Productos
         </div>
+        <div class="contenedorTipo">
+          <div class="tipo">
+            <img src="../assets/img/piel1.jpg" alt="">
+            <p>Piel seca</p>
+          </div>
+          <div class="tipo">
+            <img src="../assets/img/piel2.jpg" alt="">
+            <p>Piel mixta</p>
+          </div>
+          <div class="tipo">
+            <img src="../assets/img/piel4.jpg" alt="">
+            <p>Piel grasa</p>
+          </div>
+        </div>
+        
+        <div id="carouselExampleControls" class="carousel slide carruselProductos" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../assets/img/banco1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/img/banco2.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
         <div class="contenedorTarjetas">
             <div class="tarjeta">
                 <img src="../assets/img/producto3.jpg" alt="">
-                <h5>EMULSIÓN HIDRATANTE</h5>
+                <h5>EMULSIÓN EN GEL</h5>
                 <p>Emulsión ultra hidratante</p>
-                <button class="btn-primario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto8.jpg" alt="">
-                <h5>SERUM REGENERADOR</h5>
+                <h5>SERUM NIACINAMIDA</h5>
                 <p>Niacinamida concentrada</p>
-                <button class="btn-secundario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto6.jpg" alt="">
                 <h5>TÓNICO FACIAL</h5>
                 <p>Equilibrio del ph</p>
-                <button class="btn-terciario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto5.jpg" alt="">
                 <h5>ESENCIA FACIAL</h5>
                 <p>Esencia de té verde milenario</p>
-                <button class="btn-primario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto9.jpg" alt="">
                 <h5>GEL DE LIMPIEZA</h5>
                 <p>Fórmula gel limpieza gentil</p>
-                <button class="btn-secundario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto2.jpg" alt="">
-                <h5>BRUMA FACIAL TERMAL</h5>
+                <h5>BRUMA FACIAL</h5>
                 <p>Agua termal refrescante</p>
-                <button class="btn-terciario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto1.jpg" alt="">
                 <h5>AGUA MICELAR</h5>
                 <p>Desmaquillante bifásico</p>
-                <button class="btn-primario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div  class="tarjeta">
                 <img src="../assets/img/producto4.jpg" alt="">
                 <h5>CONTORNO DE OJOS</h5>
                 <p>Hidratante y descongestivo</p>
-                <button class="btn-secundario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto11.jpg" alt="">
                 <h5>PROTECTOR SOLAR</h5>
                 <p>FPS 50 Efecto Seco</p>
-                <button class="btn-terciario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div  class="tarjeta">
                 <img src="../assets/img/producto12.jpg" alt="">
                 <h5>LECHE DE LIMPIEZA</h5>
-                <p>Leche de limpieza fórmula invierno</p>
-                <button class="btn-primario">VER MÁS</button>
+                <p>Fórmula de invierno</p>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto10.jpg" alt="">
                 <h5>AMPOLLAS AH X10U</h5>
                 <p>Ampollas de ácido hialuronico</p>
-                <button class="btn-secundario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
             <div class="tarjeta">
                 <img src="../assets/img/producto7.jpg" alt="">
                 <h5>EXFOLIANTE QUÍMICO</h5>
                 <p>Ácido salicílico</p>
-                <button class="btn-terciario">VER MÁS</button>
+                <p class="cuotas">3 cuotas sin interés</p>
+                <button class="btn">VER MÁS</button>
             </div>
         </div>
     </main>
  
+    <section class="newsletter">
+        <div class="suscribite">
+          <h4>Suscribite al newsletter</h4>
+          <p>Recibí novedades, promociones y beneficios. Sé parte de nuestra comunidad.</p>
+        </div>
+        <div class="email">
+          <input type="text" placeholder="Ingresa tu email">
+        </div>
+        <div>
+          <button class="btn">SUSCRIBIRME</button>
+        </div>
+    </section>
     <footer>
         <div class="footerAncho">
              <div class="seccionFooter">
-                 <h5>
-                     NAVEGACIÓN
-                 </h5>
+                 <h4>Navegación</h4>
                  <ul>
                      <li><a href="../index.html">Inicio</a></li>
                      <li><a href="./promociones.html">Promociones</a></li>
@@ -142,22 +209,22 @@
                  </ul>
              </div>
              <div class="seccionFooter">
-                 <h5>NUESTRA TIENDA</h5>
+                 <h4>Nuestra tienda</h4>
                  <p>Martín Miguel de Güemes 2854, Mar del Plata, Buenos Aires, Argentina.</p>
              </div>
              <div class="seccionFooter">
-                 <h5>CONTACTANOS</h5>
+                 <h4>Contactanos</h4>
                  <p>
                      +5492235067012
                      serenity@gmail.com
                  </p>
              </div>
              <div class="seccionFooter">
-                <h5>NUESTRAS REDES</h5>
-                <img src="../assets/img/instagramblack.png" alt="">
-                <img src="../assets/img/facebookblack2.png" alt="">
-                <img src="../assets/img/snapchatblack.png" alt="">
-            </div>
+              <h4>Nuestras redes</h4>
+              <a href="https://www.instagram.com/" target="_blank"><img src="../assets/img/instagram.png" alt=""></a>
+              <a href="https://www.facebook.com/" target="_blank"><img src="../assets/img/facebook.png" alt=""></a>
+              <a href="https://www.snapchat.com/" target="_blank"><img src="../assets/img/twitter-sign.png" alt=""></a>
+          </div>
         </div>
  
          <div class="footerCopyright">
