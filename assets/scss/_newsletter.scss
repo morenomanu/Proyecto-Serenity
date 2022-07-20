@@ -6,34 +6,49 @@
     text-align: center;
     margin: 50px 10px;
     background-image: linear-gradient(to top,rgba(128, 149, 155, 0.247),rgba(128, 128, 128, 0.123));
-}
-.suscribite{    
-    padding: 20px 0px;
-    h4{
-        font-weight: bold;
-        font-size: 30px;
+    .suscribite{    
+        padding: 20px 0px;
+        h4{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        p{
+            font-size: 20px;
+            padding: 5px;
+        }
     }
-    p{
-        font-size: 20px;
-        width: 300px;
+    .email{
+        input{
+            width: 200px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    }
+    .btn{
+        margin: 10px;
     }
 }
 
-.email{
-    input{
-        width: 350px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-}
-@media(min-width:768px){
+@media(min-width:992px){
     .newsletter{
         display: flex;
         flex-direction: row;
         align-items: center;
         margin: 50px 0px;
-    }
-    .email{
-        width: 450px;
+        .suscribite{
+            p{
+                width: 300px;
+            }
+        }
+        .email{
+            input{
+                width: 350px;
+                padding: 10px;
+                margin: 0px 20px;
+            }
+        }
+        .btn{
+            margin: 0px;
+        }
     }
 }

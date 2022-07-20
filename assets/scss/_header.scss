@@ -6,10 +6,17 @@
 }
 .herramientas{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
+}
+@media(min-width:768px){
+    .herramientas{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 .logo{
     img{
