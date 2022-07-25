@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 10px 0px;
+    margin: 8px 0px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
     cursor: pointer;
     .beneficios{
@@ -14,7 +15,7 @@
             padding: 1px 3px;
         }
         p{
-            padding: 5px;
+            padding: 0px 5px;
         }
     }
 }
@@ -51,12 +52,39 @@
         font-weight: bold;
     }
 }
+.separacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: black;
+    margin: 80px 0px;
+    background-image: linear-gradient(to top,rgba(128, 149, 155, 0.247),rgba(128, 128, 128, 0.123));
+    img{
+        width: 40px;
+        margin: 10px;
+    }
+    .instagram{
+        line-height:20px;
+        margin-top: 10px;
+        a{
+            font-size: 30px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight:500;
+            color: black;
+            text-decoration: none;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+}
 .tarjetasServicios{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 80px 0px;
+    margin: 50px 0px;
     .servicio{
         display: flex;
         flex-direction: column;
@@ -65,6 +93,7 @@
         text-align: center;
         border-radius: 6px;
         width: 380px;
+        margin: 30px 0px;
     }
     img{
         width: 300px;
@@ -100,33 +129,6 @@
         padding: 10px;
     }
 }
-.separacion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    color: black;
-    margin: 50px 0px;
-    background-image: linear-gradient(to top,rgba(128, 149, 155, 0.247),rgba(128, 128, 128, 0.123));
-    img{
-        width: 40px;
-        margin: 10px;
-    }
-    .instagram{
-        line-height:20px;
-        margin-top: 10px;
-        a{
-            font-size: 30px;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight:500;
-            color: black;
-            text-decoration: none;
-        }
-        p{
-            font-size: 15px;
-        }
-    }
-}
 .ahoraDoce{
     display: flex;
     justify-content: center;
@@ -136,10 +138,16 @@
     .slider{
         display: flex;
         justify-content: center;
-        margin: 80px 0px;
+        margin: 90px 0px;
         img{
             width: 100%;
         }
+    }
+}
+@media(min-width:768px){
+    .mainInicio{
+        width: 450px;
+        height: 380px;
     }
 }
 @media(min-width:992px){
@@ -149,8 +157,15 @@
         justify-content: space-around;
         align-items: center;
         padding: 30px;
-        padding-top: 40px;
-        height: 50px;
+        padding-top: 45px;
+        height: 40px;
+        font-size: 18px;
+        margin: 0px;
+        img{
+            width: 40px;
+            height: 35px;
+            padding: 0px 2px;
+        }
     }
     .mainInicio{
         margin: 20px;
@@ -159,7 +174,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 50px 0px;
+        margin: 80px 0px;
         .servicio{
             display: flex;
             flex-direction: row;
@@ -175,5 +190,28 @@
         flex-direction: row;
         justify-content: space-evenly;
         margin: 50px 0px;
+    }
+}
+@media(min-width:1400px){
+    .barraBeneficios{
+        height: 100px;
+        font-size: 25px;
+        .beneficios{
+            img{
+                width: 45px;
+                height: 40px;
+                padding: 2px 3px;
+            }
+            p{
+                padding: 0px 6px;
+            }
+        }
+    }
+    .mainInicio{
+        width: 500px;
+        height: 420px;
+        h3{
+            font-size: 40px;
+        }
     }
 }

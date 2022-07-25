@@ -10,17 +10,9 @@
     align-items: center;
     padding: 20px;
 }
-@media(min-width:768px){
-    .herramientas{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
 .logo{
     img{
-        height: 150px;
+        height: 200px;
     }
 }
 .cuenta{
@@ -34,6 +26,38 @@
         color: black;
     }
 }
+.carruselTexto{
+    h5{
+        font-size: 25px;
+    }
+    p{
+        font-size: 20px;
+    }
+
+}
 .navegador{
     font-size: 18px;
+}
+@media(min-width:768px){
+    .herramientas{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media(min-width:1400px){
+    .logo{
+        img{
+            height: 250px;
+        }
+    }
+    .carruselTexto{
+        h5{
+            font-size: 35px;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
 }

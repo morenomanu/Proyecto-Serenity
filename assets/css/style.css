@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10px 0px;
+  margin: 8px 0px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24);
   cursor: pointer;
 }
@@ -17,7 +18,7 @@
   padding: 1px 3px;
 }
 .barraBeneficios .beneficios p {
-  padding: 5px;
+  padding: 0px 5px;
 }
 
 .contenedorInicio {
@@ -55,12 +56,40 @@
   font-weight: bold;
 }
 
+.separacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: black;
+  margin: 80px 0px;
+  background-image: linear-gradient(to top, rgba(128, 149, 155, 0.247), rgba(128, 128, 128, 0.123));
+}
+.separacion img {
+  width: 40px;
+  margin: 10px;
+}
+.separacion .instagram {
+  line-height: 20px;
+  margin-top: 10px;
+}
+.separacion .instagram a {
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+.separacion .instagram p {
+  font-size: 15px;
+}
+
 .tarjetasServicios {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 80px 0px;
+  margin: 50px 0px;
 }
 .tarjetasServicios .servicio {
   display: flex;
@@ -70,6 +99,7 @@
   text-align: center;
   border-radius: 6px;
   width: 380px;
+  margin: 30px 0px;
 }
 .tarjetasServicios img {
   width: 300px;
@@ -107,34 +137,6 @@
   padding: 10px;
 }
 
-.separacion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  color: black;
-  margin: 50px 0px;
-  background-image: linear-gradient(to top, rgba(128, 149, 155, 0.247), rgba(128, 128, 128, 0.123));
-}
-.separacion img {
-  width: 40px;
-  margin: 10px;
-}
-.separacion .instagram {
-  line-height: 20px;
-  margin-top: 10px;
-}
-.separacion .instagram a {
-  font-size: 30px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
-  color: black;
-  text-decoration: none;
-}
-.separacion .instagram p {
-  font-size: 15px;
-}
-
 .ahoraDoce {
   display: flex;
   justify-content: center;
@@ -145,10 +147,16 @@
   .slider {
     display: flex;
     justify-content: center;
-    margin: 80px 0px;
+    margin: 90px 0px;
   }
   .slider img {
     width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .mainInicio {
+    width: 450px;
+    height: 380px;
   }
 }
 @media (min-width: 992px) {
@@ -158,8 +166,15 @@
     justify-content: space-around;
     align-items: center;
     padding: 30px;
-    padding-top: 40px;
-    height: 50px;
+    padding-top: 45px;
+    height: 40px;
+    font-size: 18px;
+    margin: 0px;
+  }
+  .barraBeneficios img {
+    width: 40px;
+    height: 35px;
+    padding: 0px 2px;
   }
   .mainInicio {
     margin: 20px;
@@ -168,7 +183,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 50px 0px;
+    margin: 80px 0px;
   }
   .tarjetasServicios .servicio {
     display: flex;
@@ -184,6 +199,27 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin: 50px 0px;
+  }
+}
+@media (min-width: 1400px) {
+  .barraBeneficios {
+    height: 100px;
+    font-size: 25px;
+  }
+  .barraBeneficios .beneficios img {
+    width: 45px;
+    height: 40px;
+    padding: 2px 3px;
+  }
+  .barraBeneficios .beneficios p {
+    padding: 0px 6px;
+  }
+  .mainInicio {
+    width: 500px;
+    height: 420px;
+  }
+  .mainInicio h3 {
+    font-size: 40px;
   }
 }
 .seccion {
@@ -414,33 +450,99 @@
     width: 1000px;
   }
 }
-.ubicacion {
+.banner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  background-image: linear-gradient(to top, rgba(128, 149, 155, 0.247), rgba(128, 128, 128, 0.123));
+  color: black;
 }
-.ubicacion h2 {
-  padding: 30px;
+.banner h2 {
+  padding: 10px;
+  font-size: 60px;
+}
+.banner p {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0px;
 }
 .ubicacion iframe {
-  width: 500px;
+  width: 400px;
+  height: 300px;
 }
 
-.carruselTienda {
-  width: 500px;
+.tienda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0px;
+}
+.tienda .tiendaFotos {
+  width: 400px;
 }
 
+.tiendaInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  margin: 50px 0px;
+  width: 400px;
+}
+
+@media (min-width: 992px) {
+  .ubicacion {
+    display: flex;
+    flex-direction: row;
+  }
+  .ubicacion iframe {
+    width: 500px;
+    height: 350px;
+  }
+  .tienda {
+    display: flex;
+    flex-direction: row;
+  }
+  .tienda .tiendaFotos {
+    width: 500px;
+  }
+  .tiendaInfo {
+    width: 500px;
+    padding: 30px;
+  }
+  .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .banner h2 {
+    padding: 30px;
+    font-size: 3rem;
+  }
+}
 .cajasContacto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 50px 0px;
 }
 .cajasContacto .canalesOficiales {
   width: 50%;
-  margin: 10px;
+  margin: 30px 10px;
 }
 .cajasContacto .canalesOficiales ul li {
   margin: 10px;
@@ -452,6 +554,7 @@
 .cajasContacto .formularioContacto {
   display: flex;
   flex-direction: column;
+  margin: 30px 0px;
 }
 .cajasContacto .formularioContacto form {
   width: 400px;
@@ -483,16 +586,8 @@
   padding: 20px;
 }
 
-@media (min-width: 768px) {
-  .herramientas {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
 .logo img {
-  height: 150px;
+  height: 200px;
 }
 
 .cuenta {
@@ -506,10 +601,36 @@
   color: black;
 }
 
+.carruselTexto h5 {
+  font-size: 25px;
+}
+.carruselTexto p {
+  font-size: 20px;
+}
+
 .navegador {
   font-size: 18px;
 }
 
+@media (min-width: 768px) {
+  .herramientas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1400px) {
+  .logo img {
+    height: 250px;
+  }
+  .carruselTexto h5 {
+    font-size: 35px;
+  }
+  .carruselTexto p {
+    font-size: 30px;
+  }
+}
 .footerAncho {
   display: flex;
   flex-direction: column;
