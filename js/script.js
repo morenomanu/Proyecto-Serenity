@@ -18,8 +18,6 @@ function login(){
     return ingreso;
 }
 
-login();
-
 if(login()){
     let price = 10000;
     let discount = 4000;
