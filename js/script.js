@@ -1,60 +1,85 @@
-let password = 'hola';
-
-function login(){
-
-    let ingreso = false;
-
-    for(let i=2; i>=0; i--){
-        let userPassword = prompt('Ingresa tu contraseña para entrar al mundo Serenity Skincare. Recuerda que el usuario se bloqueará luego de '+ (i+1) +' intento/s fallido/s.');
-        if (userPassword === password){
-            alert('Contraseña correcta. ¡Bienvenida/o a Serenity!');
-            ingreso = true;
-            break;
-        }else{
-            alert('Contraseña incorrecta. Queda/n ' + i + ' intento/s.');
-        }
+class Producto {
+    constructor(nombre, formato, precio, id) {
+        this.nombre = nombre;
+        this.formato = formato;
+        this.precio = parseInt(precio);
+        this.id = id;
     }
 
-    return ingreso;
+    asignarId(array) {
+        this.id = array.length;
+    }
 }
 
-if(login()){
-    let price = 10000;
-    let discount = 4000;
-    const suma = (a, b) => a + b;
-    const resta = (a, b) => a - b;
-    const iva = x => x * 0.21;
-    
-    let option = prompt('Anteriormente has incluido "Emulsión en gel" en el carrito de compras. Para ver o calcular su precio elige una opción:  \n1- Precio bruto. \n2- Precio con iva. \n3- Precio con descuento. \n4- Precio neto. \n5- Presiona X para ir al sitio web.');
-    
-    while(option != 'X' && option !='x'){
-        switch(option){
-            case '1': 
-            alert('El precio bruto del producto es $' + price);
-            break;
-            
-            case '2':
-            let ivaPrice = suma(price, iva(price));
-            alert ('El precio con iva es $' + ivaPrice);
-            break;
+const productos = [
+    new Producto('Emulsion en gel', 'Emulsion', 1900, 1),
+    new Producto('Serum Niacinamida', 'Serum', 2300, 2),
+    new Producto('Contorno de ojos', 'Crema', 1700, 3),
+    new Producto('Gel de limpieza', 'Gel', 2000, 4),
+    new Producto('Tonico facial', 'Tonico', 1600, 5),
+    new Producto('Protector solar', 'Crema', 2700, 6),
+    new Producto('Exfoliante quimico', 'Tonico', 2300, 7),
+]
 
-            case '3':
-            let discountedPrice = resta(price,discount);
-            alert ('El precio con descuento es $' + discountedPrice);
-            break;
+let continuar = true;
 
-            case '4':
-            let netPrice = resta(suma(price,iva(price)),discount);
-            alert ('El precio neto es $' + netPrice);
-            break;
-
-            default:
-            alert('Opción incorrecta');
-            break;
-        }
-
-        option = prompt('Anteriormente has incluido "Emulsión en gel" en el carrito de compras. Para ver o calcular su precio elige una opción:  \n1- Precio bruto. \n2- Precio con iva. \n3- Precio con descuento. \n4- Precio neto. \n5- Presiona X para ir al sitio web.');
+while (continuar) {
+    let ingresar = prompt('Carga los datos del producto separados por una barra (/): nombre, formato, precio. Ingresa X para finalizar.');
+    if (ingresar.toUpperCase() == 'X') {
+        continuar = false;
+        break;
     }
+
+    let datos = ingresar.split('/');
+    const producto = new Producto(datos[0], datos[1], datos[2], datos[3], datos[4]);
+
+    productos.push(producto);
+    producto.asignarId(productos);
+}
+
+let orden = prompt('Elija de que manera desea ordenar los productos: \n1 - Nombre (A a Z) \n2 - Nombre (Z a A) \n3 - Menor a mayor precio \n4 - Formato (A a Z)');
+
+function ordenar(orden, array) {
+
+    let arrayOrdenado = array.slice(0);
+
+    switch (orden){
+        case '1':
+        let ascendente = arrayOrdenado.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        return ascendente;
+        case '2':
+        let descendente = arrayOrdenado.sort((a, b) => b.nombre.localeCompare(a.nombre));
+        return descendente;
+        case '3':
+        return arrayOrdenado.sort((a,b)=>a.precio - b.precio);
+        case '4':
+        let formatoAscendente = arrayOrdenado.sort((a, b) => a.formato.localeCompare(b.formato));
+        return formatoAscendente;
+        default:
+        alert('Inválido');
+        break;
+    }
+}
+
+function resultado(array) {
+
+    let informacion='';
+    
+    array.forEach(elemento=>{
+        informacion += 'Nombre: ' + elemento.nombre + '\nFormato: ' + elemento.formato + '\nPrecio: $' + elemento.precio + '\n\n'
+    })
+    return informacion;
+}
+
+alert(resultado(ordenar(orden, productos)))
+
+let formato = prompt('Escriba el formato que desea para visualizar los productos disponibles que coincidan:');
+
+const filtro = productos.filter((producto)=>producto.formato.toLowerCase().includes(formato.toLowerCase()))
+
+if (filtro.length==0){
+    alert('No se han encontrado coincidencias.');
 }else{
-    alert('Usuario bloqueado');
+    const imprimible = filtro.map((producto)=>producto.nombre);
+    alert ('Los productos que coinciden con el formato deseado son: \n- ' + imprimible.join('\n- '))
 }
