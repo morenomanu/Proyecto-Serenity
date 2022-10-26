@@ -639,6 +639,11 @@
     font-size: 30px;
   }
 }
+.icon {
+  width: 30px;
+  padding: 3px;
+}
+
 .footerAncho {
   display: flex;
   flex-direction: column;
@@ -699,6 +704,25 @@ ul {
   list-style: none;
 }
 
+.btnSuscripcion {
+  width: 150px;
+  padding: 8px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: rgba(59, 100, 214, 0.705);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+.suscripcion {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(177, 231, 206);
+  color: rgb(72, 172, 125);
+  border-radius: 6px;
+}
+
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -746,4 +770,41 @@ ul {
   .newsletter .btn {
     margin: 0px;
   }
+}
+.cajaIniciarSesion {
+  display: flex;
+  justify-content: center;
+}
+
+.iniciarSesion {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+}
+.iniciarSesion h2 {
+  font-weight: bold;
+  margin: 20px;
+}
+.iniciarSesion form {
+  width: 400px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 30px;
+}
+.iniciarSesion form input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+}
+
+.btnSesion {
+  margin: 15px 0px;
+  width: 100%;
+  padding: 5px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: rgba(59, 100, 214, 0.705);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
 }

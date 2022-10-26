@@ -10,3 +10,21 @@ body{
 ul{
     list-style: none;
 }
+.btnSuscripcion{
+    width: 150px;
+    padding: 8px;
+    border: 1px;
+    border-radius: 5px;
+    background-color: rgba(59, 100, 214, 0.705);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+.suscripcion{
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(177, 231, 206);
+    color: rgb(72, 172, 125);
+    border-radius: 6px;
+}
