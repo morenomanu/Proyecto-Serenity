@@ -4,10 +4,17 @@ const btnSuscripcion = document.querySelector('.btnSuscripcion'),
    modalContainer = document.getElementById("modal-container");
 
 let nuevo = document.querySelector('.nuevo');
+let emailUsuario = document.getElementById('emailUsuario');
+let btnSuscripcionUsuario = document.getElementById('btnSuscripcion');
+
 function suscripcion() {
    nuevo.innerHTML += '<h4 class="suscripcion">SUSCRIPCIÓN EXITOSA!</h4>'
 }
 btnSuscripcion.addEventListener('click', suscripcion)
+
+btnSuscripcionUsuario.addEventListener('click', ()=>{
+   localStorage.setItem('email',emailUsuario.value);
+});
 
 const productos = [
    {
@@ -104,7 +111,7 @@ verCarrito.addEventListener("click", () => {
       `;
       modalContainer.append(carritoContent);
    });
-   const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+   const total = carrito.reduce((acc, e) => acc + e.precio, 0);
 
    const totalCompra = document.createElement("div");
    totalCompra.className = "total-content";
