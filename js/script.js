@@ -110,7 +110,7 @@ stockProductos.forEach((e) => {
     <h3>${e.nombre}</h3>
     <p>${e.descripcion}</p>
     <p class="precioProducto">$ ${e.precio}</p>
-    <button id="agregar${e.id}" class="btn">Agregar <i class="fas fa-shopping-cart"></i></button>
+    <button id="agregar${e.id}" class="btn">Añadir al carrito</button>
     `
    contenedorProductos.appendChild(div)
    const boton = document.getElementById(`agregar${e.id}`)
@@ -136,26 +136,22 @@ const agregarAlCarrito = (prodId) => {
 
 const eliminarDelCarrito = (prodId) => {
    const item = carrito.find((prod) => prod.id === prodId)
-
    const indice = carrito.indexOf(item)
-
    carrito.splice(indice, 1)
    actualizarCarrito()
 };
 
 const actualizarCarrito = () => {
    contenedorCarrito.innerHTML = ""
-
    carrito.forEach((producto) => {
       const div = document.createElement('div')
       div.className = ('productoEnCarrito')
       div.innerHTML = `
-        <p>${producto.nombre}</p>
-        <p>$${producto.precio}</p>
-        <p>Cantidad: <span id="cantidad">${producto.cantidad}</span></p>
+        <p>Ítem: ${producto.nombre}</p>
+        <p>Valor: $${producto.precio}</p>
+        <p>Cant: <span id="cantidad">${producto.cantidad}</span></p>
         <button onclick="eliminarDelCarrito(${producto.id})" class="boton-eliminar"><i class="fa-solid fa-delete-left"></i></i></button>
         `
-
       contenedorCarrito.appendChild(div)
 
       localStorage.setItem('carrito', JSON.stringify(carrito))
