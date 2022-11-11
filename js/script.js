@@ -1,113 +1,184 @@
 const btnSuscripcion = document.querySelector('.btnSuscripcion'),
-   contenedorTarjetas = document.getElementById("contenedorTarjetas"),
-   verCarrito = document.getElementById("verCarrito"),
-   modalContainer = document.getElementById("modal-container");
+   contenedorProductos = document.getElementById('contenedor-productos'),
+   contenedorCarrito = document.getElementById('carrito-contenedor'),
+   contadorCarrito = document.getElementById('contadorCarrito'),
+   btnVaciar = document.getElementById('vaciar-carrito'),
+   cantidad = document.getElementById('cantidad'),
+   precioTotal = document.getElementById('precioTotal'),
+   cantidadTotal = document.getElementById('cantidadTotal');
 
 let nuevo = document.querySelector('.nuevo');
-function suscripcion() {
-   nuevo.innerHTML += '<h4 class="suscripcion">SUSCRIPCIÓN EXITOSA!</h4>'
-}
-btnSuscripcion.addEventListener('click', suscripcion)
 
-const productos = [
-   {
-      id: 1,
-      nombre: 'Vinchas kit x3',
-      precio: 1300,
-      img: "../assets/img/kit4.jpg",
-   },
-   {
-      id: 2,
-      nombre: 'Set de Brochas',
-      precio: 1800,
-      img: "../assets/img/kit7.jpg",
-   },
-   {
-      id: 3,
-      nombre: 'Kit de limpieza',
-      precio: 3600,
-      img: "../assets/img/kit1.jpg",
-   },
-   {
-      id: 4,
-      nombre: 'Pads de limpieza',
-      precio: 900,
-      img: "../assets/img/kit2.jpg",
-   },
-   {
-      id: 5,
-      nombre: 'Scrunchies x5',
-      precio: 700,
-      img: "../assets/img/kit5.jpg",
-   },
-   {
-      id: 6,
-      nombre: 'Kit de Esponjas',
-      precio: 500,
-      img: "../assets/img/kit6.jpg",
-   }
-];
+function suscripcion() {
+   nuevo.innerHTML = `<h4 class="suscripcion">SUSCRIPCIÓN EXITOSA!</h4>`
+};
+btnSuscripcion.addEventListener('click', suscripcion);
 
 let carrito = [];
 
-productos.forEach((producto) => {
-   let content = document.createElement("div");
-   content.className = "tarjeta";
-   content.innerHTML = ` 
-   <img src="${producto.img}">
-   <h3>${producto.nombre}</h3>
-   <p>$${producto.precio}</p>
-   `;
+const stockProductos = [
+   {
+      id: 1,
+      nombre: 'Faciales',
+      descripcion: 'Set x2 cremas faciales: contorno de ojos y emulsión hidratante',
+      cantidad: 1,
+      precio: 2400,
+      img: '../assets/img/kit1.jpg'
+   },
 
-   contenedorTarjetas.append(content);
+   {
+      id: 2,
+      nombre: 'Pads',
+      descripcion: 'Pads de limpieza reutilizables ecofriendly',
+      cantidad: 1,
+      precio: 1100,
+      img: '../assets/img/kit2.jpg'
+   },
 
-   let comprar = document.createElement("button");
-   comprar.className = "btn";
-   comprar.innerText = "Añadir al carrito";
-   content.append(comprar);
+   {
+      id: 3,
+      nombre: 'Corporal',
+      descripcion: 'Set de emulsión corporal, exfoliante químico y exfoliante físico',
+      cantidad: 1,
+      precio: 3650,
+      img: '../assets/img/kit3.jpg'
+   },
 
-   comprar.addEventListener("click", () => {
-      carrito.push({
-         id: producto.id,
-         img: producto.img,
-         nombre: producto.nombre,
-         precio: producto.precio,
-      });
-   });
+   {
+      id: 4,
+      nombre: 'Vinchas',
+      descripcion: 'Kit de 3 vinchas con moño para make up o skincare',
+      cantidad: 1,
+      precio: 2050,
+      img: '../assets/img/kit4.jpg'
+   },
+
+   {
+      id: 5,
+      nombre: 'Mini scrunchies',
+      descripcion: 'Kit x5 mini scrunchies estampadas',
+      cantidad: 1,
+      precio: 500,
+      img: '../assets/img/kit5.jpg'
+   },
+
+   {
+      id: 6,
+      nombre: 'Esponjas',
+      descripcion: 'Set de esponjas de celulosa x3, variedad de colores',
+      cantidad: 1,
+      precio: 850,
+      img: '../assets/img/kit6.jpg'
+   },
+
+   {
+      id: 7,
+      nombre: 'Brochas',
+      descripcion: 'Kit de brochas para make up varios usos',
+      cantidad: 1,
+      precio: 4100,
+      img: '../assets/img/kit7.jpg'
+   },
+
+   {
+      id: 8,
+      nombre: 'Max scrunchies',
+      descripcion: 'Duo de maxi scrunchies amigables con el cabello',
+      cantidad: 1,
+      precio: 700,
+      img: '../assets/img/kit55.jpg'
+   },
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+   if (localStorage.getItem('carrito')) {
+      carrito = JSON.parse(localStorage.getItem('carrito'))
+      actualizarCarrito()
+   }
 });
 
-verCarrito.addEventListener("click", () => {
-   modalContainer.innerHTML = "";
-   modalContainer.style.display = "flex";
-   const modalHeader = document.createElement("div");
-   modalHeader.className = "modal-header";
-   modalHeader.innerHTML = `
-   <h1 class = "modal-header-tittle">Carrito</h1>
-   `;
-   modalContainer.append(modalHeader);
+btnVaciar.addEventListener('click', () => {
+   carrito.length = 0
+   actualizarCarrito()
+});
 
-   const modalButton = document.createElement("h1");
-   modalButton.innerText = "X";
-   modalButton.className = "modal-header-button";
-   modalButton.addEventListener("click", () => {
-      modalContainer.style.display = "none";
-   });
-   modalHeader.append(modalButton);
+stockProductos.forEach((e) => {
+   const div = document.createElement('div')
+   div.classList.add('producto')
+   div.innerHTML = `
+    <img src=${e.img} alt= "">
+    <h3>${e.nombre}</h3>
+    <p>${e.descripcion}</p>
+    <p class="precioProducto">$ ${e.precio}</p>
+    <button id="agregar${e.id}" class="btn">Agregar <i class="fas fa-shopping-cart"></i></button>
+    `
+   contenedorProductos.appendChild(div)
+   const boton = document.getElementById(`agregar${e.id}`)
+   boton.addEventListener('click', () => {
+      agregarAlCarrito(e.id)
+   })
+});
+
+const agregarAlCarrito = (prodId) => {
+   const existe = carrito.some(prod => prod.id === prodId)
+   if (existe) {
+      const prod = carrito.map(prod => {
+         if (prod.id === prodId) {
+            prod.cantidad++
+         }
+      })
+   } else {
+      const item = stockProductos.find((prod) => prod.id === prodId)
+      carrito.push(item)
+   }
+   actualizarCarrito()
+};
+
+const eliminarDelCarrito = (prodId) => {
+   const item = carrito.find((prod) => prod.id === prodId)
+
+   const indice = carrito.indexOf(item)
+
+   carrito.splice(indice, 1)
+   actualizarCarrito()
+};
+
+const actualizarCarrito = () => {
+   contenedorCarrito.innerHTML = ""
 
    carrito.forEach((producto) => {
-      let carritoContent = document.createElement("div");
-      carritoContent.className = "modal-content";
-      carritoContent.innerHTML = `
-      <img src="${producto.img}">
-      <h3>${producto.nombre}</h3>
-      <p>$${producto.precio}</p>
-      `;
-      modalContainer.append(carritoContent);
-   });
-   const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+      const div = document.createElement('div')
+      div.className = ('productoEnCarrito')
+      div.innerHTML = `
+        <p>${producto.nombre}</p>
+        <p>$${producto.precio}</p>
+        <p>Cantidad: <span id="cantidad">${producto.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${producto.id})" class="boton-eliminar"><i class="fa-solid fa-delete-left"></i></i></button>
+        `
 
-   const totalCompra = document.createElement("div");
-   totalCompra.className = "total-content";
-   totalCompra.innerHTML = `Total: $${total}`;
-   modalContainer.append(totalCompra);
+      contenedorCarrito.appendChild(div)
+
+      localStorage.setItem('carrito', JSON.stringify(carrito))
+
+   })
+   contadorCarrito.innerText = carrito.length
+   precioTotal.innerText = carrito.reduce((acc, producto) => acc + producto.cantidad * producto.precio, 0)
+};
+
+const contenedorModal = document.getElementsByClassName('modal-contenedor')[0],
+   btnAbrir = document.getElementById('boton-carrito'),
+   btnCerrar = document.getElementById('carritoCerrar'),
+   modalCarrito = document.getElementsByClassName('modal-carrito')[0];
+
+btnAbrir.addEventListener('click', () => {
+   contenedorModal.classList.toggle('modal-active')
+});
+btnCerrar.addEventListener('click', () => {
+   contenedorModal.classList.toggle('modal-active')
+});
+contenedorModal.addEventListener('click', (event) => {
+   contenedorModal.classList.toggle('modal-active')
+});
+modalCarrito.addEventListener('click', (event) => {
+   event.stopPropagation()
 });
